@@ -1,2 +1,22 @@
 <div>Hello Angular</div>
-<div>Project Name: {{title}}</div>
+<div>Project Name: {{ title }}</div>
+<div>Product Count: {{ products.length }}</div>
+<hr />
+<table mat-table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.id }}</td>
+      <td>{{ product.title }}</td>
+      <td>{{ product.description }}</td>
+      <td>{{ product.price }}</td>
+    </tr>
+  </tbody>
+</table>
